@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>classes(afterclass)</title>
+<style>
+    body{
+        zoom: 200%;
+    }
+    mark{
+        background-color: ghostwhite;
+    }
+</style>    
+</head>
+<body>
+    <h1>classes(js blueprints)</h1>
+
+    <h2>creating a simple class:</h2>
+        <div style="background-color: ghostwhite; padding: 10px; font-family: 'Courier New', Courier, monospace; font-weight: bold; color: dimgray;">        
+    <p> <mark style="color: green;">//creating a class</mark><br>
+        <mark style="color: royalblue;">class</mark> <mark style="color: seagreen;">student</mark><mark style="color: goldenrod;">{</mark><br>
+        <mark style="color: green;">//class constructor</mark><br>
+        <mark style="color: royalblue;">constructor</mark><mark style="color: fuchsia;">(</mark><mark style="color: cornflowerblue;">name</mark>, <mark style="color: cornflowerblue;">year</mark><mark style="color: fuchsia;">){</mark><br>
+            <mark style="color: royalblue;">this</mark>.<mark style="color: cornflowerblue;">name</mark>=<mark style="color: cornflowerblue;">name</mark>;<br>
+            <mark style="color: royalblue;">this</mark>.<mark style="color: cornflowerblue;">year</mark>=<mark style="color: cornflowerblue;">year</mark>;<br>
+        <mark style="color: fuchsia;">}</mark><br>
+        <mark style="color: green;">//methods(age)</mark><br>
+    <mark style="color: gold;">age</mark><mark style="color: fuchsia;">(){</mark><br>
+        <mark style="color: royalblue;">let</mark> <mark style="color: cornflowerblue;">date</mark>= <mark style="color: royalblue;">new</mark> <mark style="color: seagreen;">Date</mark><mark style="color: blue;">()</mark>;<br>
+        <mark style="color: darkmagenta;">return</mark> <mark style="color: cornflowerblue;">date</mark>.<mark style="color: gold;">getFullYear</mark><mark style="color: blue;">()</mark>-<mark style="color: royalblue;">this</mark>.<mark style="color: cornflowerblue;">year</mark>;<br>
+    }<br>  
+    }</p>
+        </div>
+
+    <h3>examples:</h3>    
+
+    <p id="student1"></p>
+    <p id="student2"></p>
+    <p id="student3"></p>
+    <p id="student4"></p>
+    <p id="student5"></p>
+
+    <h2>class inheritance:</h2>
+        <div style="background-color: ghostwhite; padding: 10px; font-family: 'Courier New', Courier, monospace; font-weight: bold; color: dimgray;">
+    <p>    <mark style="color: green;">//parent class and child class(class inheritance)</mark><br>
+        <marK style="color: royalblue;">class</marK> <mark style="color: seagreen;">phone</mark><mark style="color: goldenrod;">{</mark><br>
+            <mark style="color: royalblue;">constructor</mark><mark style="color: fuchsia;">(</mark><mark style="color: cornflowerblue;">brand</mark><mark style="color: fuchsia;">){</mark><br>
+                <mark style="color: royalblue;">this</mark>.<mark style="color: cornflowerblue;">phonename</mark>=<mark style="color: cornflowerblue;">brand</mark>;<br>
+        <mark style="color: fuchsia;">}</mark><br>
+        <mark style="color: gold;">myphone</mark><mark style="color: fuchsia;">(){</mark><br>
+            <mark style="color: darkmagenta;">return</mark> <mark style="color: chocolate;">'i have a '</mark> +<mark style="color: royalblue;">this</mark>.<mark style="color: cornflowerblue;">phonename</mark>;<br>
+        <mark style="color: fuchsia;">}</mark><br>
+        <mark style="color: goldenrod;">}</mark><br><br>
+        <mark style="color: royalblue;">class</mark> <mark style="color: seagreen;">model</mark> <mark style="color: royalblue;">extends</mark> <mark style="color: seagreen;">phone</mark><mark style="color: goldenrod;">{</mark><br>
+            <mark style="color: royalblue;">constructor</mark><mark style="color: fuchsia;">(</mark><mark style="color: cornflowerblue;">brand</mark>, <mark style="color: cornflowerblue;">model</mark><mark style="color: fuchsia;">){</mark><br>
+                <mark style="color: royalblue;">super</mark><mark style="color: blue;">(</mark><mark style="color: cornflowerblue;">brand</mark><mark style="color: blue;">)</mark>;<br>
+                <mark style="color: royalblue;">this</mark>.<mark style="color: cornflowerblue;">model</mark>=<mark style="color: cornflowerblue;">model</mark>;<br>
+            <mark style="color: fuchsia;">}</mark><br>
+        <mark style="color: gold;">show</mark><mark style="color: fuchsia;">(){</mark><br>
+            <mark style="color: darkmagenta;">return</mark> <mark style="color: royalblue;">this</mark>.<mark style="color: gold;">myphone</mark><mark style="color: blue;">()</mark> + <mark style="color: chocolate;">', it is a '</mark> +<mark style="color: royalblue;">this</mark>.<mark style="color: cornflowerblue;">model</mark>;<br>
+        <mark style="color: fuchsia;">}</mark><br>
+        <mark style="color: goldenrod;">}</mark><br></p>        
+        </div>
+
+    <p id="myphone_details1"></p>
+    <p id="myphone_details2"></p>
+    <p id="myphone_details3"></p>
+    <p id="myphone_details4"></p>
+    <p id="myphone_details5"></p>
+<script>
+    //creating a class
+    class student{
+        //class constructor
+        constructor(name, year){
+            this.name=name;
+            this.year=year;
+        }
+        //methods(age)
+    age(){
+        let date= new Date();
+        return date.getFullYear()-this.year;
+    }  
+    }
+
+    student1= new student("seline ellis", 2008, "19 may");
+    document.getElementById("student1").innerHTML="full name: " + student1.name + "<br>" + "birth year: " + student1.year + "<br>" + "current age: " + student1.age() + " years";
+
+    student2= new student("mila scrubwood", 2012);
+    document.getElementById("student2").innerHTML="full name: " + student2.name + "<br>" + "birth year: " + student2.year + "<br>" + "current age: " + student2.age() + " years";
+
+    student3= new student("avery miles", 2014);
+    document.getElementById("student3").innerHTML="full name: " + student3.name + "<br>" + "birth year: " + student3.year + "<br>" + "current age: " + student3.age() + " years";
+
+    student4= new student("mary belle", 2006);
+    document.getElementById("student4").innerHTML="full name: " + student4.name + "<br>" + "birth year: " + student4.year + "<br>" + "current age: " + student4.age() + " years";
+
+    student5= new student("lily anders", 2002);
+    document.getElementById("student5").innerHTML="full name: " + student5.name + "<br>" + "birth year: " + student5.year + "<br>" + "current age: " + student5.age() + " years";
+
+    //parent class and child class(class inheritance)
+    class phone{
+        constructor(brand){
+            this.phonename=brand;
+    }
+    myphone(){
+        return 'phone brand: ' + this.phonename + "<br>";
+    }
+    }
+    class model extends phone{
+        constructor(brand, model){
+            super(brand);
+            this.model=model;
+    }
+    show(){
+        return this.myphone() + 'phone model: ' +this.model;
+    }
+    }
+
+    let myphone1= new model("samsung galaxy", "s24 ultra");
+    document.getElementById("myphone_details1").innerHTML=myphone1.show();
+
+    let myphone2= new model("iphone", "16 pro max");
+    document.getElementById("myphone_details2").innerHTML=myphone2.show();
+
+    let myphone3= new model("google pixel", "8 pro");
+    document.getElementById("myphone_details3").innerHTML=myphone3.show();
+
+    let myphone4= new model("realme", "gt 6t");
+    document.getElementById("myphone_details4").innerHTML=myphone4.show();
+
+    let myphone5= new model("vivo", "v40 lite");
+    document.getElementById("myphone_details5").innerHTML=myphone5.show();
+</script>    
+</body>
+</html>
